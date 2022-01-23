@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class EasyCartAnimation extends StatefulWidget {
+  final Duration duration;
   final Offset? startPosition;
   final Offset? endPosition;
   final Color color;
@@ -15,6 +16,7 @@ class EasyCartAnimation extends StatefulWidget {
 
   const EasyCartAnimation({
     Key? key,
+    this.duration = const Duration(milliseconds: 800),
     required this.startPosition,
     required this.endPosition,
     this.color = Colors.red,
@@ -39,8 +41,7 @@ class _CartAnimationPageState extends State<EasyCartAnimation>
   @override
   void initState() {
     super.initState();
-    _controller =
-        AnimationController(duration: Duration(milliseconds: 800), vsync: this);
+    _controller = AnimationController(duration: widget.duration, vsync: this);
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
 
     var x0 = widget.startPosition!.dx;

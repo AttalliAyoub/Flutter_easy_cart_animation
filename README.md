@@ -1,5 +1,7 @@
 # 🎬Easy Cart Animation
 
+# You can change the duration with this clone
+
 Easy Cart Animation provides you an easy animated widget when adds a product to your cart.
 
 
